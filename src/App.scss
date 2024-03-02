@@ -11,12 +11,6 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -39,4 +33,28 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.container{
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+  
+
+  .file-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(255, 250, 250, 0.229);
+    padding: 10vh;
+
+  }
+  .file-list{
+    list-style-type: none;
+    padding: 0;
+
+    button{
+      
+    }
+  }
 }

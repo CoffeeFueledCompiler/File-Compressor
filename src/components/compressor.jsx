@@ -38,18 +38,18 @@ function FileCompressionApp() {
   };
 
   return (
-    <div>
-      <input type="file" ref={fileInputRef} onChange={handleFileChange} multiple /> 
+    <div className='container'>
+      <input type="file" ref={fileInputRef} onChange={handleFileChange} multiple className='file-input'/> 
       {selectedFiles.length > 0 && (
-        <ul>
-          {selectedFiles.map((file, index) => (
-            <li key={index}>
-              {file.name}
-              <button onClick={() => handleRemoveFile(index)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      )}
+  <ul className='file-list'> 
+    {selectedFiles.map((file, index) => (
+      <li key={index}>
+        {file.name} 
+        <button onClick={() => handleRemoveFile(index)}>Remove</button>
+      </li>
+    ))}
+  </ul>
+)}
       <button onClick={handleCompress} disabled={!selectedFiles.length || isCompressing}>
         {isCompressing ? 'Compressing...' : 'Compress'}
       </button>
